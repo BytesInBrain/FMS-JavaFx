@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.LogsController">
+    <children>
+        <AnchorPane layoutX="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="tableViewl" depthTest="DISABLE" layoutX="19.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="562.0" stylesheets="@../tabel2.css">
+               <columns>
+                  <TableColumn fx:id="idColumnl" prefWidth="55.0" text="ID" />
+                  <TableColumn fx:id="accountNameColumnl" prefWidth="156.0" text="Account Name" />
+                  <TableColumn fx:id="spendColumnl" prefWidth="177.0" text="Spend" />
+                  <TableColumn fx:id="categoryColumnl" prefWidth="156.0" text="Category" />
+               </columns>
+            </TableView>
+         </children>
+        </AnchorPane>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #ffb6b6;">
+            <children>
+                <ImageView fitHeight="50.0" fitWidth="50.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../logos/money.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="4.0" top="26.0" />
+                    </HBox.margin>
+                </ImageView>
+                <Label fx:id="heading" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0" styleClass="text1" stylesheets="@../stylesheet.css" text="CashCache" textFill="#a5a5a5">
+                    <font>
+                        <Font name="DejaVu Sans Mono Bold" size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                </Label>
+            </children>
+        </HBox>
+        <VBox layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #679b9b;" stylesheets="@../stylesheet.css">
+            <children>
+                <HBox fx:id="Bacc" onMouseClicked="#gotoAccount" prefHeight="42.0" prefWidth="213.0" styleClass="sidemenuitem" stylesheets="@../stylesheet.css">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <children>
+                        <ImageView>
+                            <image>
+                                <Image url="@../logos/bank.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="20.0" top="3.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="41.0" prefWidth="159.0" styleClass="text2" stylesheets="@../stylesheet.css" text="Bank Account" textFill="#252325">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox fx:id="spendanalysis" onMouseClicked="#gotoSpendAnalysis" prefHeight="42.0" prefWidth="213.0">
+                    <children>
+                        <ImageView>
+                            <image>
+                                <Image url="@../logos/dashboard.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="20.0" top="3.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="63.0" prefWidth="167.0" styleClass="text2" stylesheets="@../stylesheet.css" text="Spend Analysis" textFill="#282628">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox fx:id="expenditure" onMouseClicked="#gotoExpenditure" prefHeight="42.0" prefWidth="213.0">
+                    <children>
+                        <ImageView>
+                            <image>
+                                <Image url="@../logos/spending.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="20.0" top="3.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="63.0" prefWidth="167.0" styleClass="text2" stylesheets="@../stylesheet.css" text="Expenditure" textFill="#3c393c">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox fx:id="logs" onMouseClicked="#gotoLogs" prefHeight="42.0" prefWidth="213.0">
+                    <children>
+                        <ImageView>
+                            <image>
+                                <Image url="@../logos/database.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="63.0" prefWidth="167.0" styleClass="text2" stylesheets="@../stylesheet.css" text="Logs" textFill="#4a4449">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox fx:id="account" onMouseClicked="#gotoAddAccount" prefHeight="42.0" prefWidth="213.0" styleClass="sidemenuitem" stylesheets="@../stylesheet.css">
+                    <children>
+                        <ImageView>
+                            <image>
+                                <Image url="@../logos/add-user.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="20.0" top="3.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="41.0" prefWidth="159.0" styleClass="text2" stylesheets="@../stylesheet.css" text="Add Account" textFill="#252325">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

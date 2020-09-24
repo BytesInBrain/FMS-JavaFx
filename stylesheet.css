@@ -1,0 +1,16 @@
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('/Fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Pacifico', cursive;
+    src:url('/Fonts/Pacifico-Regular.ttf');
+}
+.text1 {
+    /*-fx-font-family: 'Roboto', sans-serif;*/
+    -fx-font:25px "Pacifico", cursive;
+}
+.text2{
+    -fx-font:15px 'Roboto', sans-serif;
+}
